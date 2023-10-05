@@ -2,7 +2,51 @@
  *
  * Created by: Angelo Yalung
  * Created on: Oct 2023
- * This program ...
+ * This program turns on the individual colors for the RGB LED
 */
 
-basic.showString('Hello, World!')
+// p
+basic.clearScreen()
+basic.pause(1000)
+
+// colors
+input.onButtonPressed(Button.A, function() {
+  pins.digitalWritePin(DigitalPin.P14, 1)
+  basic.showString("Red")
+
+  basic.pause(1000)
+
+  pins.digitalWritePin(DigitalPin.P14, 0)
+  basic.showString("Blue")
+  pins.digitalWritePin(DigitalPin.P15,1)
+
+  basic.pause(1000)
+
+  pins.digitalWritePin(DigitalPin.P15, 0)
+  basic.showString("Green")
+  pins.digitalWritePin(DigitalPin.P16, 1)
+
+  basic.pause(1000)
+
+  pins.digitalWritePin(DigitalPin.P15,1)
+  pins.digitalWritePin(DigitalPin.P14,1)
+  basic.showString("White")
+
+  basic.pause(1000)
+
+  pins.digitalWritePin(DigitalPin.P16,0)
+  basic.showString("Magenta")
+
+  basic.pause(1000)
+
+  pins.digitalWritePin(DigitalPin.P16,1)
+  pins.digitalWritePin(DigitalPin.P15,0)
+  basic.showString("Yellow")
+
+  basic.pause(1000)
+
+  pins.digitalWritePin(DigitalPin.P15,1)
+  pins.digitalWritePin(DigitalPin.P14,0)
+})
+
+basic.clearScreen()
